@@ -2,3 +2,69 @@
 @media(max-width:1100px){.main-content{padding:0 25px}.sidebar{width:220px}.main-content{margin-left:220px}.workflow-grid{grid-template-columns:repeat(2,1fr)}.metric-grid{grid-template-columns:repeat(2,1fr)}.agent-layout{grid-template-columns:245px minmax(0,1fr)}}
 @media(max-width:760px){.sidebar{position:static;width:auto;height:auto;padding:12px 14px;border-right:0;border-bottom:1px solid var(--line)}.brand{padding:0 2px 12px}.sidebar .nav-label,.sidebar-bottom{display:none}.sidebar nav{display:flex;gap:4px;overflow:auto}.nav-item{min-width:max-content;padding:8px;font-size:10px}.nav-count{display:none}.main-content{margin:0;padding:0 15px}.topbar{height:48px;margin-bottom:22px}.page-heading{align-items:flex-start;flex-direction:column;gap:13px}.page-heading h1{font-size:25px}.topbar-right .pill{display:none}.bottom-grid,.agent-layout{grid-template-columns:1fr}.agent-chain{grid-template-columns:repeat(2,1fr)}.agent-card:nth-child(2):after{display:none}.metric-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.memory-toolbar{flex-wrap:wrap}.searchbox{flex-basis:100%}.memory-toolbar select{flex:1}.memory-toolbar>.subtle{margin-left:auto}.app-footer{flex-direction:column}.workflow-grid{gap:8px}.workflow-card{min-height:180px;padding:13px}.result-columns{grid-template-columns:1fr}}
 @media(max-width:430px){.metric-grid,.metric-grid.three{grid-template-columns:1fr 1fr;gap:7px}.metric-card{padding:12px;min-height:116px}.metric-card>strong{font-size:22px}.metric-card>small{font-size:9px}.metric-grid.four{grid-template-columns:1fr 1fr}.workflow-grid{grid-template-columns:1fr 1fr}.workflow-card small{font-size:9px}.agent-chain{gap:7px}.agent-card{padding:10px}.page-heading .button{width:100%}.chart-row{grid-template-columns:23px minmax(75px,1fr) 67px;gap:6px}.chart-values{gap:4px;font-size:8px}}
+
+/* Readability pass: raise the smallest labels and supporting copy across screens. */
+body{font-size:16px;line-height:1.55}
+.nav-item{font-size:14px}
+.brand strong{font-size:16px}
+.brand small,.nav-count,.sidebar-foot{font-size:10px}
+.nav-label,.eyebrow{font-size:12px}
+.scope-card b{font-size:13px}
+.scope-card small,.sidebar-foot span{font-size:11px}
+.breadcrumbs{font-size:13px}
+.pill{font-size:10px}
+.page-heading h1{font-size:34px}
+.lede{font-size:15px}
+.button{font-size:13px}
+.notice{font-size:12px;line-height:1.65}
+.metric-top{font-size:11px}
+.metric-card>small{font-size:12px}
+.metric-bottom,.subtle{font-size:11px}
+.section-title h2{font-size:20px}
+.workflow-card b{font-size:14px}
+.workflow-card small{font-size:12px;line-height:1.7}
+.workflow-index{font-size:11px}
+.workflow-link{font-size:12px}
+.panel-heading h3{font-size:15px}
+.text-button{font-size:12px}
+.case-info b{font-size:12px}
+.case-info small,.case-status{font-size:11px}
+.principle-panel>p{font-size:12px;line-height:1.75}
+.principle-rule{font-size:10px}
+.app-footer{font-size:11px}
+.scenario-panel h3{font-size:16px}
+.scenario-option b{font-size:12px}
+.scenario-option small,.scenario-detail,.help-text{font-size:11px}
+.scenario-detail{line-height:1.75}
+.run-summary h3{font-size:14px}
+.run-summary p,.run-meta{font-size:11px}
+.agent-card h4{font-size:13px}
+.agent-card p{font-size:11px;line-height:1.65}
+.agent-kicker{font-size:10px}
+.agent-outcome{font-size:10px}
+.result-panel h3{font-size:14px}
+.result-panel p{font-size:12px;line-height:1.75}
+.result-block h4{font-size:10px}
+.evidence-line,.empty-state{font-size:11px;line-height:1.6}
+.evidence-id{font-size:10px}
+.result-conclusion b{font-size:12px}
+.result-conclusion small{font-size:11px;line-height:1.65}
+.searchbox input,.memory-toolbar select{font-size:12px}
+.memory-table th{font-size:10px}
+.memory-table td{font-size:11px;line-height:1.6}
+.memory-table td:first-child,.source-cell{font-size:10px}
+.badge,.row-action{font-size:10px}
+.memory-footer{font-size:11px}
+.eval-tab{font-size:13px}
+.chart-legend,.chart-values,.chart-row>strong{font-size:10px}
+.chart-note{font-size:11px;line-height:1.6}
+.poison-copy b{font-size:12px}
+.poison-copy small{font-size:11px;line-height:1.65}
+.pass-mark{font-size:9px}
+.limitation h3{font-size:14px}
+.limitation p,.dialog-copy{font-size:12px;line-height:1.7}
+.proposal-dialog label{font-size:12px}
+.proposal-dialog input{font-size:12px}
+.dialog-actions .button{font-size:12px}
+.toast{font-size:12px}
+@media(max-width:760px){.page-heading h1{font-size:30px}.nav-item{font-size:12px}.workflow-card small{font-size:11px}.app-footer{font-size:10px}}
