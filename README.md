@@ -6,7 +6,7 @@ A runnable, dependency-free teaching prototype for the Module 2 mini-project. It
 
 The [`web/`](web/index.html) folder is a static walkthrough inspired by the browser-based demonstration format in the reference link. Visitors can run the C1–C4 scenario trace, inspect memory fixtures, simulate review/forget actions, and view the recorded policy and poisoning-test results. It is a client-side teaching simulation; it does not execute the Python/SQLite backend in the browser or connect to live station data. Changes made in the memory screen are stored in that browser's local storage only.
 
-Expected Pages URL after the first successful deployment: [https://ekkxboon.github.io/HydroGuard-Agent/](https://ekkxboon.github.io/HydroGuard-Agent/).
+Expected Pages URL after the first successful deployment: [https://ekkxboon.github.io/DIT716_LTM_Prototype/](https://ekkxboon.github.io/DIT716_LTM_Prototype/).
 
 Build and preview the exact Pages artifact locally:
 
