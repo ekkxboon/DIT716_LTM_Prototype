@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta name="description" content="Interactive teaching demo for the DIT 716 governed long-term memory prototype.">
+  <title>DIT 716 · Governed Memory Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="เมนูหลัก">
+      <a class="brand" href="#overview" aria-label="DIT 716 Memory Lab home">
+        <span class="brand-mark">M<span>+</span></span>
+        <span><strong>Memory Lab</strong><small>DIT 716 · MODULE 02</small></span>
+      </a>
+      <div class="nav-label">WORKSPACE</div>
+      <nav>
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">◫</span> ภาพรวม <span class="nav-count">01</span></button>
+        <button class="nav-item" data-view="agents"><span class="nav-icon">⌘</span> Agent pipeline <span class="nav-count">02</span></button>
+        <button class="nav-item" data-view="memory"><span class="nav-icon">▤</span> Long-term memory <span class="nav-count">03</span></button>
+        <button class="nav-item" data-view="evaluation"><span class="nav-icon">⌁</span> Policy & safety tests <span class="nav-count">04</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="scope-card"><span class="pulse-dot"></span><span><b>Demo environment</b><small>synthetic data · local only</small></span></div>
+        <div class="sidebar-foot">GOVERNED LTM PROTOTYPE<br><span>Build 0.1 · Offline demo</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>DIT 716</span><b>/</b><strong id="crumb-current">ภาพรวม</strong></div>
+        <div class="topbar-right"><span class="pill pill-neutral"><i></i> SIMULATION</span><span class="avatar">XB</span></div>
+      </header>
+
+      <section class="view active" id="view-overview">
+        <div class="page-heading">
+          <div><p class="eyebrow">MODULE 02 / MINI-PROJECT</p><h1>Governed Memory Lab</h1><p class="lede">ทดลองวงจรความจำระยะยาวของ agent ตั้งแต่ retrieve ไปจนถึง forget</p></div>
+          <button class="button button-primary" data-go="agents"><span>▶</span> เริ่มทดลอง agent</button>
+        </div>
+        <div class="notice"><span class="notice-icon">i</span><span><strong>Teaching prototype</strong> — ผลลัพธ์ทั้งหมดเป็น synthetic fixtures; หน้านี้จำลอง deterministic Python prototype เพื่อการนำเสนอ และไม่เชื่อมต่อสถานีหรือ backend จริง</span><button class="notice-close" aria-label="ปิด">×</button></div>
+        <div class="metric-grid">
+          <article class="metric-card"><div class="metric-top"><span>AGENT ROLES</span><span class="metric-icon orange">⌘</span></div><strong>04</strong><small>A1 · A2 · A3 · A4</small><div class="metric-bottom"><span class="mini-bars"><i></i><i></i><i></i><i></i></span> one pipeline</div></article>
+          <article class="metric-card"><div class="metric-top"><span>MEMORY EPISODES</span><span class="metric-icon">▤</span></div><strong id="metric-memory">15</strong><small>synthetic fixture snapshot</small><div class="metric-bottom"><span class="status-dot green"></span> governed retrieval</div></article>
+          <article class="metric-card"><div class="metric-top"><span>PACKAGE TESTS</span><span class="metric-icon">✓</span></div><strong>15<span class="metric-unit">pass · 1 skip</span></strong><small>experiment test needs local labels</small><div class="metric-bottom"><span class="status-dot green"></span> includes 4 adversarial cases</div></article>
+          <article class="metric-card"><div class="metric-top"><span>DATA MODE</span><span class="metric-icon">◉</span></div><strong class="mode-value">Offline</strong><small>no account · no external API</small><div class="metric-bottom"><span class="status-dot orange-dot"></span> browser simulation</div></article>
+        </div>
+        <div class="section-title"><div><p class="eyebrow">START HERE</p><h2>Prototype workflow</h2></div><span class="subtle">4 stages · bounded by policy</span></div>
+        <div class="workflow-grid">
+          <button class="workflow-card" data-go="agents"><span class="workflow-index">01</span><span class="workflow-symbol">⌕</span><b>Retrieve context</b><small>A2 แยก current evidence ออกจาก memory analogies และกรอง policy ก่อนจัดอันดับ</small><span class="workflow-link">ทดลอง pipeline <b>↗</b></span></button>
+          <button class="workflow-card" data-go="memory"><span class="workflow-index">02</span><span class="workflow-symbol">✳</span><b>Summarize & review</b><small>สร้าง source-linked summary เป็น pending แล้วให้ reviewer อนุมัติก่อนทำ vector</small><span class="workflow-link">จัดการ memory <b>↗</b></span></button>
+          <button class="workflow-card" data-go="evaluation"><span class="workflow-index">03</span><span class="workflow-symbol">⌁</span><b>Test policy & safety</b><small>เปรียบเทียบ retrieval policy พร้อมลอง poisoning และ adversarial cases</small><span class="workflow-link">ดูผลทดสอบ <b>↗</b></span></button>
+          <button class="workflow-card" data-go="memory"><span class="workflow-index">04</span><span class="workflow-symbol">⌫</span><b>Forget responsibly</b><small>ดูผล TTL และ source revocation ต่อรายการใน serving index</small><span class="workflow-link">เปิด memory store <b>↗</b></span></button>
+        </div>
+        <div class="bottom-grid">
+          <article class="panel"><div class="panel-heading"><div><p class="eyebrow">LATEST RUN</p><h3>Agent scenarios</h3></div><button class="text-button" data-go="agents">ดูทั้งหมด <span>↗</span></button></div><div id="overview-cases" class="case-list"></div></article>
+          <article class="panel principle-panel"><div class="panel-heading"><div><p class="eyebrow">DESIGN PRINCIPLE</p><h3>Memory is context, not evidence</h3></div><span class="principle-icon">✳</span></div><p>รายการที่ค้นคืนได้ช่วยสร้างบริบท แต่จะไม่กลายเป็นหลักฐานของเหตุการณ์ปัจจุบันโดยอัตโนมัติ</p><div class="principle-rule"><span>CURRENT EVIDENCE</span><b>≠</b><span>MEMORY ANALOGY</span></div><button class="button button-secondary" data-go="agents">ดูการแยกข้อมูลนี้ <span>→</span></button></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-agents">
+        <div class="page-heading"><div><p class="eyebrow">A1 → A2 → A3 → A4</p><h1>Agent pipeline</h1><p class="lede">รัน synthetic scenario และตรวจว่า evidence, analogy และ decision ถูกแยกกัน</p></div><span class="pill pill-neutral"><i></i> RULE-BASED DEMO</span></div>
+        <div class="agent-layout">
+          <aside class="panel scenario-panel"><p class="eyebrow">SCENARIO</p><h3>เลือกเหตุการณ์ทดสอบ</h3><div class="scenario-options" id="scenario-options"></div><div class="scenario-detail" id="scenario-detail"></div><button class="button button-primary full-width" id="run-pipeline">▶ &nbsp; Run pipeline</button><p class="help-text">แต่ละ scenario ใช้ข้อมูลตัวอย่างสังเคราะห์ที่ freeze ไว้</p></aside>
+          <div class="pipeline-panel"><div class="panel run-summary" id="run-summary"></div><div class="agent-chain" id="agent-chain"></div><div class="panel result-panel" id="agent-result"></div></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-memory">
+        <div class="page-heading"><div><p class="eyebrow">LONG-TERM MEMORY / GOVERNANCE</p><h1>Memory store</h1><p class="lede">ค้นดู synthetic episodes และทดลอง approval, TTL และ revocation ใน browser</p></div><button class="button button-primary" id="new-proposal">＋ สร้าง proposal</button></div>
+        <div class="notice"><span class="notice-icon">i</span><span>สถานะที่เปลี่ยนในหน้านี้เป็น <strong>client-side simulation</strong> เท่านั้น; การ run prototype จริงใช้ SQLite ผ่าน Python</span><button class="notice-close" aria-label="ปิด">×</button></div>
+        <div class="memory-summary metric-grid three"><article class="metric-card"><div class="metric-top"><span>APPROVED</span><span class="status-dot green"></span></div><strong id="mem-approved">—</strong><small>eligible for policy checks</small></article><article class="metric-card"><div class="metric-top"><span>PENDING REVIEW</span><span class="status-dot orange-dot"></span></div><strong id="mem-pending">—</strong><small>not in vector retrieval</small></article><article class="metric-card"><div class="metric-top"><span>REVOKED / EXPIRED</span><span class="status-dot red"></span></div><strong id="mem-inactive">—</strong><small>excluded from serving</small></article></div>
+        <div class="panel memory-panel"><div class="memory-toolbar"><div class="searchbox"><span>⌕</span><input id="memory-search" type="search" placeholder="ค้นหา summary, station หรือ source ID" aria-label="ค้นหา memory"></div><select id="memory-filter" aria-label="กรองสถานะ"><option value="all">ทุกสถานะ</option><option value="approved">Approved</option><option value="pending">Pending</option><option value="revoked">Revoked</option><option value="expired">Expired</option></select><span class="subtle" id="memory-count"></span></div><div class="memory-table-wrap"><table class="memory-table"><thead><tr><th>MEMORY</th><th>SUMMARY</th><th>SCOPE</th><th>SOURCE</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody id="memory-rows"></tbody></table></div></div>
+        <div class="memory-footer"><span>◈ &nbsp;Vector index มีเฉพาะ approved episodes ที่ไม่หมดอายุหรือถูกเพิกถอน</span><button class="text-button" id="reset-memory">Reset simulation ↺</button></div>
+      </section>
+
+      <section class="view" id="view-evaluation">
+        <div class="page-heading"><div><p class="eyebrow">EVALUATION / POLICY EXPERIMENT</p><h1>Policy & safety tests</h1><p class="lede">ผลจาก frozen synthetic fixtures และ adversarial unit tests</p></div><span class="pill pill-success"><i></i> 15 PASS · 1 LOCAL-ONLY SKIP</span></div>
+        <div class="eval-tabs"><button class="eval-tab active" data-eval="policy">Retrieval policy</button><button class="eval-tab" data-eval="poisoning">Poisoning tests <span>4</span></button></div>
+        <div class="eval-content active" id="eval-policy"><div class="metric-grid four" id="policy-metrics"></div><div class="panel chart-panel"><div class="panel-heading"><div><p class="eyebrow">PILOT RESULTS · 6 SYNTHETIC QUERIES</p><h3>Precision & recall by condition</h3></div><span class="chart-legend"><i class="legend-orange"></i> Precision <i class="legend-dark"></i> Recall</span></div><div id="policy-chart" class="chart-bars"></div><p class="chart-note">ค่าที่เห็นเป็น pilot fixture result; ใช้เพื่อสาธิต trade-off เท่านั้น ไม่ใช่หลักฐานความแม่นยำทั่วไป</p></div><div class="panel test-cases"><div class="panel-heading"><div><p class="eyebrow">ADVERSARIAL COVERAGE</p><h3>Memory poisoning boundary checks</h3></div><span class="pill pill-success"><i></i> 4 / 4 PASS</span></div><div id="poisoning-preview"></div><button class="button button-secondary" data-eval-go="poisoning">เปิดรายละเอียดการทดสอบ <span>→</span></button></div></div>
+        <div class="eval-content" id="eval-poisoning"><div class="notice warning"><span class="notice-icon">!</span><span>Tests ตรวจ boundary ของ deterministic prototype; <strong>ยังไม่ใช่</strong>การทดสอบ prompt injection กับ LLM จริง</span></div><div class="panel poisoning-panel"><div class="panel-heading"><div><p class="eyebrow">AUTOMATED UNIT TESTS</p><h3>Adversarial cases</h3></div><span class="pill pill-success"><i></i> ALL PASS</span></div><div id="poisoning-list"></div></div><div class="panel limitation"><p class="eyebrow">INTERPRETATION LIMIT</p><h3>Passing fixtures does not establish production security</h3><p>ชุดนี้ตรวจผลลัพธ์ที่กำหนดไว้ใน synthetic corpus; ยังไม่ครอบคลุม threat model ของ LLM, embedding model, database host, credentials, backup หรือ concurrent users</p></div></div>
+      </section>
+      <footer class="app-footer"><span>DIT 716 · Module 02 · Synthetic teaching demo</span><span>Prototype 0.1 <b>·</b> Built for reproducible walkthrough</span></footer>
+    </main>
+  </div>
+
+  <dialog id="proposal-dialog" class="proposal-dialog"><form method="dialog" id="proposal-form"><div class="dialog-heading"><div><p class="eyebrow">MEMORY WRITE GATE</p><h2>New episode proposal</h2></div><button class="icon-button" value="cancel" aria-label="ปิด">×</button></div><p class="dialog-copy">สร้าง summary แบบ pending เพื่อสาธิตการ review ก่อน vectorization</p><label>Station<input name="station" value="S17" required></label><label>Observed morphology<input name="morphology" placeholder="เช่น abrupt spike, no corroboration" required></label><label>Candidate hypothesis<input name="hypothesis" placeholder="ระบุเป็น candidate ที่ยังไม่ adjudicated" required></label><label>Source ID<input name="source" placeholder="SRC-DEMO-001" required></label><label>Evidence ID<input name="evidence" placeholder="EV-DEMO-001" required></label><div class="dialog-actions"><button class="button button-secondary" value="cancel">ยกเลิก</button><button class="button button-primary" value="submit">บันทึกเป็น pending</button></div></form></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

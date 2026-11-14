@@ -1,0 +1,367 @@
+{
+  "snapshot_id": "dit716-ltm-pilot-v1",
+  "decision_day": 365,
+  "sources": [
+    {
+      "source_id": "SRC-101",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-102",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-103",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-104",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-105",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-106",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-107",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-108",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-109",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-110",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-111",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-112",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-113",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-114",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    },
+    {
+      "source_id": "SRC-115",
+      "kind": "synthetic_training_evidence",
+      "status": "active"
+    }
+  ],
+  "episodes": [
+    {
+      "memory_id": "EP-001",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 22,
+      "summary": "At S17, a stage sensor remained flat and repeated one value; the reviewed example was a sensor freeze, not a hydrological plateau.",
+      "source_ids": [
+        "SRC-101"
+      ],
+      "evidence_ids": [
+        "EV-101"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-002",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 40,
+      "summary": "At S17, stage rose rapidly after upstream rainfall; timing and neighboring gauge behavior supported a genuine hydrological event.",
+      "source_ids": [
+        "SRC-102"
+      ],
+      "evidence_ids": [
+        "EV-102"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-003",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 18,
+      "summary": "At S17, water-level packets arrived late with shifted timestamps; telemetry provenance supported a delayed transmission fault.",
+      "source_ids": [
+        "SRC-103"
+      ],
+      "evidence_ids": [
+        "EV-103"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-004",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 25,
+      "summary": "At S17, a modem maintenance record followed missing telemetry; the record became available only after the event decision time.",
+      "source_ids": [
+        "SRC-104"
+      ],
+      "evidence_ids": [
+        "EV-104"
+      ],
+      "available_day": 366,
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-005",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 240,
+      "summary": "At S17, an old stage sensor froze before reboot; maintenance evidence confirmed a sensor fault.",
+      "source_ids": [
+        "SRC-105"
+      ],
+      "evidence_ids": [
+        "EV-105"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-006",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 30,
+      "summary": "At S17, a stage baseline shifted after a gauge datum configuration change; unit and configuration metadata explained the offset.",
+      "source_ids": [
+        "SRC-106"
+      ],
+      "evidence_ids": [
+        "EV-106"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-007",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 20,
+      "summary": "Offline synthetic training example: independent scenario provenance supported a bounded false-data event behind an abrupt stage spike; a sensor fault remained an alternative to verify.",
+      "source_ids": [
+        "SRC-107"
+      ],
+      "evidence_ids": [
+        "EV-107"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-008",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 50,
+      "summary": "At a neighboring upstream station, rainfall preceded a stage rise within the expected local lag; this context corroborated an event at S17.",
+      "source_ids": [
+        "SRC-108"
+      ],
+      "evidence_ids": [
+        "EV-108"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-009",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 100,
+      "summary": "At S17, an unusual high stage coincided with widespread rainfall and neighboring gauge rises; review retained it as a genuine extreme.",
+      "source_ids": [
+        "SRC-109"
+      ],
+      "evidence_ids": [
+        "EV-109"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-010",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 60,
+      "summary": "At S17, a spike was ambiguous between sensor behavior and event response; contradictory evidence remained unresolved and the outcome was unknown.",
+      "source_ids": [
+        "SRC-110"
+      ],
+      "evidence_ids": [
+        "EV-110"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-011",
+      "station": "S44",
+      "basin": "BASIN-2",
+      "approved_age_days": 15,
+      "summary": "At S44, an unrelated gauge had a flatline; this episode is outside the S17/BASIN-1 scope.",
+      "source_ids": [
+        "SRC-111"
+      ],
+      "evidence_ids": [
+        "EV-111"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "memory_id": "EP-012",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 15,
+      "summary": "At S17, an approved sensor range assertion describes expected measurement limits and configuration review.",
+      "source_ids": [
+        "SRC-112"
+      ],
+      "evidence_ids": [
+        "EV-112"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "memory_type": "semantic"
+    },
+    {
+      "memory_id": "EP-013",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 10,
+      "summary": "At S17, a user profile prefers concise English summaries; it contains no diagnostic evidence.",
+      "source_ids": [
+        "SRC-113"
+      ],
+      "evidence_ids": [],
+      "allowed_roles": [
+        "A3"
+      ],
+      "memory_type": "profile"
+    },
+    {
+      "memory_id": "EP-014",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 12,
+      "summary": "At S17, a draft episode proposes a cause without reviewer approval and must not be retrieved.",
+      "source_ids": [
+        "SRC-114"
+      ],
+      "evidence_ids": [
+        "EV-114"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "status": "pending"
+    },
+    {
+      "memory_id": "EP-015",
+      "station": "S17",
+      "basin": "BASIN-1",
+      "approved_age_days": 9,
+      "summary": "At S17, a later maintenance note records a sensor reset; this source is revoked in the forgetting demonstration.",
+      "source_ids": [
+        "SRC-115"
+      ],
+      "evidence_ids": [
+        "EV-115"
+      ],
+      "allowed_roles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    }
+  ]
+}

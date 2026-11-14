@@ -1,0 +1,5 @@
+condition,schedule,episode_ttl_days,queries,gold_relevant,retrieved_unique,relevant_retrieved,precision,recall,retrieval_calls,avg_calls_per_query,estimated_context_tokens,p50_retrieval_ms,forbidden_retrievals,ttl_excluded_candidate_checks,unavailable_at_decision_exclusions,revoked_source_exclusions,expired_episode_ttl_days
+P0,passive,none,6,7,6,5,0.8333,0.7143,6,1.0,147,0.3452,0,0,6,0,disabled
+P1,active,none,6,7,8,6,0.75,0.8571,9,1.5,225,0.3575,0,0,9,0,disabled
+P2,passive,180,6,7,6,5,0.8333,0.7143,6,1.0,165,0.3246,0,6,6,0,180
+P3,active,180,6,7,8,6,0.75,0.8571,9,1.5,243,0.3266,0,9,9,0,180
