@@ -8,6 +8,8 @@ The [`web/`](web/index.html) folder is a static walkthrough inspired by the brow
 
 Expected Pages URL after the first successful deployment: [https://ekkxboon.github.io/DIT716_LTM_Prototype/](https://ekkxboon.github.io/DIT716_LTM_Prototype/).
 
+The executed [Agent System Demo notebook](DIT716_Agent_System_Demo.ipynb) is also available in the repository. GitHub renders its saved code and cell outputs for review; GitHub Pages does not execute Jupyter cells. Use the browser demo above for the interactive walkthrough, or follow the notebook setup cells to run the Python demo locally.
+
 Build and preview the exact Pages artifact locally:
 
 ```bash
